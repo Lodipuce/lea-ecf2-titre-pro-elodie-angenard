@@ -1,5 +1,17 @@
 /* variables */
+:root {
+    --main-color-princ: #16a34a;
+    --clear-color-princ: #22c55e;
+    --dark-color-princ: #15803d;
 
+    --main-color-alt: #2563eb;
+    --clear-color-alt: #3b82f6;
+    --dark-color-alt: #1d4ed8;
+
+    --text-font-family: Ubuntu, sans-serif;
+    --title-font-family: Montserrat, sans-serif;
+    --title-font-weight: 600;
+}
 
 
 
@@ -8,3 +20,133 @@
 * {
     box-sizing: border-box;
 }
+
+body {
+    font-family: var(--text-font-family);
+}
+
+body h1, h2 {
+    font-family: var(--title-font-family);
+    font-weight: var(--title-font-weight);
+}
+
+body h1 {
+    color: white;
+}
+
+
+
+/* HEADER */
+header {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+div.header_container1 {
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+div.header_container2 {
+    height: 80%;
+    background-color: var(--main-color-princ);
+}
+
+div.header_circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+div.header_container_circles {
+    display: flex;
+    align-items: center;
+}
+
+div.circle1 {
+    background-color: var(--main-color-princ);
+}
+
+div.circle2 {
+    background-color: var(--main-color-alt);
+}
+
+div.header_container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.header_container2 hr {
+    border-top: 1px solid white;
+    width: 50%;
+}
+
+
+
+/* MAIN */
+div.main_container {
+    width: 80%;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+section.profil {
+    height: 45%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+section.profil h2 {
+    height: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img.profil_img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--main-color-princ);
+}
+
+section.skills {
+    height: 40%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+section.skills h2 {
+    height: 50px;
+    display: inline-flex;
+    justify-content: center;
+}
+
+section.skills ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+img.skill_img {
+    width: 80px;
+    height: 80px;
+}
+
