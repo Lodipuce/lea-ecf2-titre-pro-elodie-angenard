@@ -74,6 +74,12 @@ form.addEventListener('submit', (e) => {
             oldWarning.remove();
         }
 
+        // supprimer un ancien message se soumission s'il existe
+        let oldSubmitted = document.getElementById('submitted');
+        if (oldSubmitted) {
+            oldSubmitted.remove();
+        }
+
         // creer le message d'avertissement dans une div#warning
         const warning = document.createElement('div');
         warning.setAttribute('id', 'warning');
