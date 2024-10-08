@@ -40,8 +40,9 @@ footer.main_theme {
     background-color: var(--main-color-princ);
 }
 
-h1.main_theme, h2.main_theme {
+h2.main_theme {
     text-decoration: underline dotted var(--main-color-princ) 2px;
+    text-underline-offset: 8px;
 }
 
 
@@ -72,6 +73,7 @@ footer.alt_theme {
 
 h2.alt_theme {
     text-decoration: underline dotted var(--main-color-alt) 2px;
+    text-underline-offset: 8px;
 }
 
 
@@ -88,13 +90,19 @@ body {
     font-family: var(--text-font-family);
 }
 
-body h1, h2 {
+h1, h2 {
     font-family: var(--title-font-family);
     font-weight: var(--title-font-weight);
 }
 
-body h1 {
+h1 {
     color: white;
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 20px;
 }
 
 
@@ -116,6 +124,7 @@ div.header_container1 {
 
 div.header_container2 {
     height: 75%;
+
 }
 
 div.header_circle {
@@ -146,7 +155,11 @@ div.header_container2 hr {
 
 /* MAIN */
 main {
-    height: auto;
+    height: 1500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 div.main_container {
@@ -308,22 +321,18 @@ footer p {
 
     /* MAIN */
     main {
-        height: 1200px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
+        height: 1300px;
     }
 
     div.main_container {
-        width: 60%;
-        height: 500px;
+        width: 55%;
+        height: 580px;
     }
 
     /* PROFIL */
     section.profil {
         height: 60%;
-        width: 80%;
+        width: 100%;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
@@ -341,17 +350,14 @@ footer p {
 
     /* SKILLS */
     section.skills {
-        height: 25%;
-    }
-
-    section.skills ul {
-        gap: 50px;
+        width: 100%;
+        height: 30%;
     }
 
 
     /* CONTACT */
     section.contact {
-        width: 60%;
+        width: 55%;
     }
 
     section.contact form {
