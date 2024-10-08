@@ -68,21 +68,39 @@ form.addEventListener('submit', (e) => {
         // empecher la soumission du formulaire
         e.preventDefault();
 
+        // supprimer un ancien message d'erreur s'il existe
+        let oldWarning = document.getElementById('warning');
+        if (oldWarning) {
+            oldWarning.remove();
+        }
+
         // creer le message d'avertissement dans une div#warning
         const warning = document.createElement('div');
         warning.setAttribute('id', 'warning');
         warning.innerHTML = "Le message doit contenir au moins 15 caractères.";
 
-        // inserer la div#warning à la fin du form
-        form.appendChild(warning);
+        // inserer la div#warning à la fin du form avant le bouton
+        button.insertAdjacentElement('beforebegin', warning);
 
     } else {
+        // supprimer un ancien message d'erreur s'il existe
+        let oldWarning = document.getElementById('warning');
+        if (oldWarning) {
+            oldWarning.remove();
+        }
+
+        // supprimer un ancien message se soumission s'il existe
+        let oldSubmitted = document.getElementById('submitted');
+        if (oldSubmitted) {
+            oldSubmitted.remove();
+        }
+
         // creer le message OK dans une div#submitted
         const submitted = document.createElement('div');
         submitted.setAttribute('id', 'submitted');
         submitted.innerHTML = "Message soumis avec succès !";
 
-        // si elle existe, effacer la div#warning puis inserer la div#submitted
-        document.getElementById('warning') ? warning.remove(): form.appendChild(submitted);
+        // inserer la div#submitted à la fin du form avant le bouton
+        button.insertAdjacentElement('beforebegin', submitted);
     }
 })

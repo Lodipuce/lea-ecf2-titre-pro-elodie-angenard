@@ -266,12 +266,14 @@ section.contact div {
     height: 80px;
     display: flex;
     flex-direction: column;
+    gap: 5px;
 }
 
 section.contact input, section.contact textarea {
     background-color: rgb(241, 245, 250);
     border: none;
     height: 30px;
+    border-radius: 5px;
 }
 
 section.contact textarea {
