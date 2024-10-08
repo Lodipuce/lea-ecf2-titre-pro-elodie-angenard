@@ -18,11 +18,11 @@
             <div class="header_container1">
                 <img src="formation_ressources_integration_profil_devweb_page-main/images/logo-john-doe.svg" alt="logo John Doe">
                 <div class="header_container_circles">
-                    <div class="header_circle circle1"></div>
-                    <div class="header_circle circle2"></div>
+                    <div class="header_circle circle1 main_theme" id="main_theme"></div>
+                    <div class="header_circle circle2 alt_theme" id="alt_theme"></div>
                 </div>
             </div>
-            <div class="header_container2">
+            <div class="header_container2 main_theme" id="colored_header">
                 <h1>John Doe - Développeur Web</h1>
                 <hr>
             </div>
@@ -31,9 +31,9 @@
         <main>
             <div class="main_container">
                 <section class="profil">
-                    <h2>Mon Profil</h2>
+                    <h2 class="main_theme">Mon Profil</h2>
                     <div class="div_img">
-                        <img src="formation_ressources_integration_profil_devweb_page-main/images/portrait.jpg" alt="portrait de John Doe" class="profil_img">
+                        <img src="formation_ressources_integration_profil_devweb_page-main/images/portrait.jpg" alt="portrait de John Doe" class="profil_img main_theme" id="profil">
                     </div>
                     <p>Développeur web de père en fils, passionné par la technologie et
                         l'innovation. J'ai acquis une expertise en HTML, CSS, JavaScript
@@ -41,7 +41,7 @@
                         esthétiques. Prêt à relever de nouveaux défis.</p>
                 </section>
                 <section class="skills">
-                    <h2>Mes compétences</h2>
+                    <h2 class="main_theme">Mes compétences</h2>
                     <nav>
                         <ul>
                             <li>
@@ -69,7 +69,7 @@
                 </section>   
             </div>
             <section class="contact">
-                <h2>Me contacter</h2>
+                <h2 class="main_theme" >Me contacter</h2>
                 <form action="">
                     <div class="half">
                         <label for="name">Nom</label>
@@ -93,19 +93,20 @@
                     
                     <div class="full">
                         <label for="message">Message</label>
-                        <textarea name="message" id="message" placeholder="Entrez votre message" rows="6"></textarea>
+                        <textarea name="message" id="message" placeholder="Entrez votre message"></textarea>
                     </div>
                     
                     <div>
-                        <input type="button" value="Envoyer" class="form_btn">
+                        <input type="button" value="Envoyer" class="form_btn main_theme" id="button">
                     </div>
                     
                 </form>
             </section>
         </main>
 
-        <footer>
+        <footer class="main_theme" id="footer">
             <p>&copy; John Doe Officiel</p>
         </footer>
     </body>
+    <script src="js/main.js"></script>
 </html>

@@ -14,6 +14,69 @@
 }
 
 
+/* THEMES */
+/* MAIN */
+div.main_theme {
+    background-color: var(--main-color-princ);
+}
+
+div.circle1.main_theme:hover {
+    background-color: var(--clear-color-princ);
+}
+
+img.profil_img.main_theme {
+    border:2px solid var(--main-color-princ);
+}
+
+section.contact input.form_btn.main_theme {
+    background-color: var(--main-color-princ);
+}
+
+section.contact input.form_btn.main_theme:hover {
+    background-color: var(--dark-color-princ);
+}
+
+footer.main_theme {
+    background-color: var(--main-color-princ);
+}
+
+h1.main_theme, h2.main_theme {
+    text-decoration: underline dotted var(--main-color-princ) 2px;
+}
+
+
+/* ALT */
+div.alt_theme {
+    background-color: var(--main-color-alt);
+}
+
+div.circle2.alt_theme:hover {
+    background-color: var(--clear-color-alt);
+}
+
+img.profil_img.alt_theme {
+    border:2px solid var(--main-color-alt);
+}
+
+section.contact input.form_btn.alt_theme {
+    background-color: var(--main-color-alt);
+}
+
+section.contact input.form_btn.alt_theme:hover {
+    background-color: var(--dark-color-alt);
+}
+
+footer.alt_theme {
+    background-color: var(--main-color-alt);
+}
+
+h2.alt_theme {
+    text-decoration: underline dotted var(--main-color-alt) 2px;
+}
+
+
+
+
 
 /* my styles */
 
@@ -28,7 +91,6 @@ body {
 body h1, h2 {
     font-family: var(--title-font-family);
     font-weight: var(--title-font-weight);
-    text-decoration: underline dotted var(--main-color-princ) 2px;
 }
 
 body h1 {
@@ -54,7 +116,6 @@ div.header_container1 {
 
 div.header_container2 {
     height: 75%;
-    background-color: var(--main-color-princ);
 }
 
 div.header_circle {
@@ -67,14 +128,6 @@ div.header_container_circles {
     display: flex;
     align-items: center;
     gap: 5px;
-}
-
-div.circle1 {
-    background-color: var(--main-color-princ);
-}
-
-div.circle2 {
-    background-color: var(--main-color-alt);
 }
 
 div.header_container2 {
@@ -128,7 +181,7 @@ img.profil_img {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid var(--main-color-princ);
+    object-position: right;
 }
 
 
@@ -138,6 +191,10 @@ section.skills {
     width: 80%;
     display: flex;
     flex-direction: column;
+}
+
+section.skills nav {
+    padding: 40px;
 }
 
 section.skills h2 {
@@ -157,6 +214,11 @@ section.skills ul {
 img.skill_img {
     width: 80px;
     height: 80px;
+}
+
+img.skill_img:hover {
+    transform: rotate(20deg);
+    transition: transform 1s;
 }
 
 
@@ -193,19 +255,23 @@ section.contact div {
     flex-direction: column;
 }
 
-section.contact input {
+section.contact input, section.contact textarea {
     background-color: rgb(241, 245, 250);
     border: none;
     height: 30px;
 }
 
+section.contact textarea {
+    height: 70px;
+}
+
 section.contact input.form_btn {
     height: 40px;
-    width: 60px;
-    background-color: var(--main-color-princ);
+    width: 80px;
     color: white;
     border: none;
     border-radius: 5px;
+    margin-top: 20px;
 }
 
 
@@ -213,7 +279,6 @@ section.contact input.form_btn {
 footer {
     width: 100%;
     height: 100px;
-    background-color: var(--main-color-princ);
     display: flex;
     justify-content: center;
     align-items: center;
