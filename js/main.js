@@ -54,4 +54,38 @@ altToggle.addEventListener('click', () => {
 
 
 
-// 
+
+// CONTRAINTES DU FORMULAIRE
+
+// sélection du champ de message
+let form = document.getElementById('form');
+let message = document.getElementById('message');
+
+// au moment de la soumission du formulaire
+form.addEventListener('submit', (e) => {
+    // vérifier la longueur du message saisi
+    if (message.value.length < 15) {
+        // empecher la soumission du formulaire
+        e.preventDefault();
+
+        // créer le message d'avertissement dans une div#warning
+        const warning = document.createElement('div');
+        warning.setAttribute('id', 'warning');
+        warning.innerHTML = "Le message doit contenir au moins 15 caractères.";
+
+        // insérer la div#warning à la fin du form
+        form.appendChild(warning);
+
+    } else {
+        // créer le message OK dans une div#submitted
+        const submitted = document.createElement('div');
+        submitted.setAttribute('id', 'submitted');
+        submitted.innerHTML = "Message soumis avec succès !";
+
+        // effacer la div#warning
+        warning.remove();
+
+        // insérer la div#submitted à la fin du form
+        form.appendChild(submitted);
+    }
+})

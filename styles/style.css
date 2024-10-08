@@ -274,6 +274,14 @@ section.contact input.form_btn {
     margin-top: 20px;
 }
 
+div#warning {
+    color: crimson;
+}
+
+div#submitted {
+    color: green;
+}
+
 
 /* FOOTER */
 footer {
